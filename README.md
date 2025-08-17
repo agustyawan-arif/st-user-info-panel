@@ -88,3 +88,58 @@ with st.sidebar:
         elif evt == "chip":
             pass
 ```
+
+## ⚙️ API
+
+### `st_user_info_panel(...) -> dict | None`
+
+**Identity**
+
+| Prop            | Type            |                  Default | Notes                 |
+| --------------- | --------------- | -----------------------: | --------------------- |
+| `name`          | `str`           |             `"John Doe"` | Used for initials     |
+| `job_title`     | `str`           |       `"Data Scientist"` |                       |
+| `email`         | `str`           | `"john.doe@company.com"` | Wraps for long values |
+| `avatar_color`  | `str`           |              `"#FE5556"` | Any CSS color         |
+| `department`    | `Optional[str]` |                   `None` | Optional              |
+| `work_location` | `Optional[str]` |                   `None` | Optional              |
+
+**Stats (neutral)**
+
+| Prop                     | Type    | Default | Notes           |
+| ------------------------ | ------- | ------: | --------------- |
+| `messages_count`         | `int`   |     `0` |                 |
+| `monthly_messages_limit` | `int`   |     `0` | `0` = unlimited |
+| `tokens_this_month`      | `int`   |     `0` |                 |
+| `monthly_tokens_limit`   | `int`   |     `0` | `0` = unlimited |
+| `cost_usd`               | `float` |   `0.0` |                 |
+| `monthly_cost_limit`     | `float` |   `0.0` | `0` = unlimited |
+| `show_detailed_stats`    | `bool`  |  `True` |                 |
+| `show_progress`          | `bool`  |  `True` |                 |
+
+**Layout & Behavior**
+
+| Prop               | Type                      |  Default | Notes             |
+| ------------------ | ------------------------- | -------: | ----------------- |
+| `side_padding_px`  | `int`                     |     `12` |                   |
+| `bottom_offset_px` | `int`                     |     `16` |                   |
+| `border_radius_px` | `int`                     |     `12` |                   |
+| `compact`          | `bool`                    |  `False` |                   |
+| `stats_style`      | `Literal["rows","cards"]` | `"rows"` | `rows` is compact |
+
+**State control**
+
+| Prop         | Type            | Default | Notes                              |
+| ------------ | --------------- | ------: | ---------------------------------- |
+| `controlled` | `bool`          | `False` | If `True`, follows `expanded` prop |
+| `expanded`   | `bool`          | `False` |                                    |
+| `key`        | `Optional[str]` |  `None` | Stable key recommended             |
+
+**Return (events)**
+
+```python
+{
+  "event": "toggle" | "logout" | "chip",
+  "expanded": bool,
+}
+```
