@@ -1,5 +1,5 @@
 # st-user-info-panel
-
+x
 A polished **Streamlit custom component** for a floating **User Info Panel** anchored to the sidebar.  
 Supports fixed float stick in sidebar, **collapsed chip** (avatar initials) when the sidebar is collapsed, and **usage stats** (messages, tokens, cost).
 
