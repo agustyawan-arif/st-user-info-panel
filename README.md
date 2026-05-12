@@ -24,6 +24,8 @@ Supports fixed float stick in sidebar, **collapsed chip** (avatar initials) when
 
 ## 📦 Install
 
+> **Note:** Starting from version `0.1.1`, the minimum required Python version has been lowered to `>=3.10` (previously `>=3.11`), providing broader compatibility!
+
 ```bash
 pip install st-user-info-panel
 ```
